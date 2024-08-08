@@ -27,7 +27,7 @@ class Airport(models.Model):
     )
 
     def __str__(self):
-        return f"{self.name} ({self.city} - {self.country})"
+        return f"{self.name} ({self.city}, {self.country})"
 
 
 class Route(models.Model):
@@ -45,18 +45,18 @@ class Route(models.Model):
         )
 
     def __str__(self):
-        return f"{self.source} - {self.destination} ({self.distance} km)"
+        return f"{self.source} - {self.destination}"
 
 
 class AirplaneType(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
 
     def __str__(self):
         return f"{self.name}"
 
 
 class Airplane(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
     airplane_type = models.ForeignKey(
         AirplaneType, on_delete=models.CASCADE, related_name="airplanes"
     )
