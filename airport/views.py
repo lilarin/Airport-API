@@ -34,55 +34,60 @@ from airport.serializers import (
 )
 
 
-class PagePagination(PageNumberPagination):
+class StandardPagePagination(PageNumberPagination):
     page_size = 5
+    max_page_size = 100
+
+
+class SmallPagePagination(PageNumberPagination):
+    page_size = 2
     max_page_size = 100
 
 
 class CityViewSet(viewsets.ModelViewSet):
     queryset = City.objects.all()
     serializer_class = CitySerializer
-    pagination_class = PagePagination
+    pagination_class = StandardPagePagination
     filterset_class = NameFilter
 
 
 class CountryViewSet(viewsets.ModelViewSet):
     queryset = Country.objects.all()
     serializer_class = CountrySerializer
-    pagination_class = PagePagination
+    pagination_class = StandardPagePagination
     filterset_class = NameFilter
 
 
 class AirportViewSet(viewsets.ModelViewSet):
     queryset = Airport.objects.select_related()
     serializer_class = AirportSerializer
-    pagination_class = PagePagination
+    pagination_class = StandardPagePagination
     filterset_class = AirportFilter
 
 
 class RouteViewSet(viewsets.ModelViewSet):
     queryset = Route.objects.select_related()
     serializer_class = RouteSerializer
-    pagination_class = PagePagination
+    pagination_class = StandardPagePagination
 
 
 class AirplaneViewSet(viewsets.ModelViewSet):
     queryset = Airplane.objects.select_related()
     serializer_class = AirplaneSerializer
-    pagination_class = PagePagination
+    pagination_class = StandardPagePagination
 
 
 class AirplaneTypeViewSet(viewsets.ModelViewSet):
     queryset = AirplaneType.objects.select_related()
     serializer_class = AirplaneTypeSerializer
-    pagination_class = PagePagination
+    pagination_class = StandardPagePagination
     filterset_class = NameFilter
 
 
 class FlightViewSet(viewsets.ModelViewSet):
     queryset = Flight.objects.select_related().prefetch_related("crew")
     serializer_class = FlightSerializer
-    pagination_class = PagePagination
+    pagination_class = SmallPagePagination
 
 
 class TicketViewSet(viewsets.ModelViewSet):
@@ -92,19 +97,15 @@ class TicketViewSet(viewsets.ModelViewSet):
         'flight__airplane__airplane_type',
     )
     serializer_class = TicketSerializer
-    pagination_class = PagePagination
+    pagination_class = SmallPagePagination
 
 
-class OrderViewSet(
-    mixins.ListModelMixin,
-    mixins.CreateModelMixin,
-    GenericViewSet,
-):
+class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.prefetch_related(
         "tickets__movie_session__movie", "tickets__movie_session__cinema_hall"
     )
     serializer_class = OrderSerializer
-    pagination_class = PagePagination
+    pagination_class = SmallPagePagination
     permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
