@@ -210,8 +210,10 @@ class FlightTicketSerializer(serializers.ModelSerializer):
 
 
 class TicketSerializer(serializers.ModelSerializer):
+    flight = serializers.PrimaryKeyRelatedField(queryset=Flight.objects.all())
+
     def validate(self, attrs):
-        data = super(TicketSerializer, self).validate(attrs=attrs)
+        data = super().validate(attrs=attrs)
         Ticket.validate_ticket(
             attrs["row"],
             attrs["seat"],
@@ -219,8 +221,6 @@ class TicketSerializer(serializers.ModelSerializer):
             ValidationError
         )
         return data
-
-    flight = FlightTicketSerializer(many=False, read_only=True)
 
     class Meta:
         model = Ticket
@@ -232,9 +232,36 @@ class TicketSerializer(serializers.ModelSerializer):
             "order"
         )
 
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation['flight'] = FlightSerializer(instance.flight).data
+        return representation
+
+    def to_internal_value(self, data):
+        internal_value = super().to_internal_value(data)
+        flight_data = data.get('flight')
+
+        if isinstance(flight_data, dict):
+            internal_value['flight'] = Flight.objects.get(id=flight_data['id'])
+        elif isinstance(flight_data, int):
+            internal_value['flight'] = Flight.objects.get(id=flight_data)
+
+        return internal_value
+
+
+class TicketOrderSerializer(TicketSerializer):
+    class Meta:
+        model = Ticket
+        fields = (
+            "id",
+            "row",
+            "seat",
+            "flight",
+        )
+
 
 class OrderSerializer(serializers.ModelSerializer):
-    tickets = TicketSerializer(
+    tickets = TicketOrderSerializer(
         many=True, read_only=False, allow_empty=False
     )
     created_at = serializers.DateTimeField(
@@ -256,22 +283,3 @@ class OrderSerializer(serializers.ModelSerializer):
             for ticket_data in tickets_data:
                 Ticket.objects.create(order=order, **ticket_data)
             return order
-
-
-class TicketListSerializer(TicketSerializer):
-    flight = FlightTicketSerializer(
-        many=False
-    )
-
-    class Meta:
-        model = Ticket
-        fields = (
-            "id",
-            "row",
-            "seat",
-            "flight",
-            "order"
-        )
-        extra_kwargs = {
-            "order": {"write_only": True}
-        }
