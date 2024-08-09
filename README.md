@@ -8,6 +8,7 @@ API service for airport management writen on DRF
 * Managing orders, flights, airplanes, routes, crew, airports as admin
 * Searching flights as anonymous user and create orders as authenticated user
 * Filtering and validation of tickets data
+* Email based authorization (username replacement)
 
 # Installing using GitHub
 Install PostgresSQL and create database
