@@ -2,9 +2,12 @@ from rest_framework import viewsets, mixins
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import (
     IsAuthenticated,
-    AllowAny
+    IsAdminUser
 )
 from rest_framework.viewsets import GenericViewSet
+from rest_framework_simplejwt.authentication import (
+    JWTAuthentication
+)
 
 from airport.filters import (
     NameFilter,
@@ -25,7 +28,6 @@ from airport.models import (
     City,
     Country,
 )
-from airport.permissions import IsAdminOrReadOnly
 from airport.serializers import (
     RouteSerializer,
     AirplaneSerializer,
@@ -57,6 +59,8 @@ class CityViewSet(viewsets.ModelViewSet):
     serializer_class = CitySerializer
     pagination_class = StandardPagePagination
     filterset_class = NameFilter
+    permission_classes = (IsAdminUser,)
+    authentication_classes = (JWTAuthentication,)
 
 
 class CountryViewSet(viewsets.ModelViewSet):
@@ -65,6 +69,8 @@ class CountryViewSet(viewsets.ModelViewSet):
     serializer_class = CountrySerializer
     pagination_class = StandardPagePagination
     filterset_class = NameFilter
+    permission_classes = (IsAdminUser,)
+    authentication_classes = (JWTAuthentication,)
 
 
 class AirportViewSet(viewsets.ModelViewSet):
@@ -73,6 +79,8 @@ class AirportViewSet(viewsets.ModelViewSet):
     serializer_class = AirportSerializer
     pagination_class = StandardPagePagination
     filterset_class = AirportFilter
+    permission_classes = (IsAdminUser,)
+    authentication_classes = (JWTAuthentication,)
 
 
 class RouteViewSet(viewsets.ModelViewSet):
@@ -81,6 +89,8 @@ class RouteViewSet(viewsets.ModelViewSet):
     serializer_class = RouteSerializer
     pagination_class = StandardPagePagination
     filterset_class = RouteFilter
+    permission_classes = (IsAdminUser,)
+    authentication_classes = (JWTAuthentication,)
 
 
 class AirplaneTypeViewSet(viewsets.ModelViewSet):
@@ -89,6 +99,8 @@ class AirplaneTypeViewSet(viewsets.ModelViewSet):
     serializer_class = AirplaneTypeSerializer
     pagination_class = StandardPagePagination
     filterset_class = NameFilter
+    permission_classes = (IsAdminUser,)
+    authentication_classes = (JWTAuthentication,)
 
 
 class AirplaneViewSet(viewsets.ModelViewSet):
@@ -97,6 +109,8 @@ class AirplaneViewSet(viewsets.ModelViewSet):
     serializer_class = AirplaneSerializer
     pagination_class = StandardPagePagination
     filterset_class = NameFilter
+    permission_classes = (IsAdminUser,)
+    authentication_classes = (JWTAuthentication,)
 
 
 class FlightViewSet(
@@ -105,32 +119,42 @@ class FlightViewSet(
     GenericViewSet,
 ):
     """View flights for everyone"""
-    queryset = Flight.objects.select_related().prefetch_related("crew")
+    queryset = Flight.objects.select_related()
     serializer_class = FlightSerializer
     pagination_class = SmallPagePagination
     filterset_class = FlightFilter
-    permission_classes = (AllowAny,)
 
 
 class FlightAdminViewSet(viewsets.ModelViewSet):
     """Manage flights as admin user"""
-    queryset = Flight.objects.select_related().prefetch_related("crew")
+    queryset = Flight.objects.select_related(
+        "route__destination__city",
+        "route__source__city",
+        "route__destination__country",
+        "route__source__country",
+        "airplane__airplane_type",
+    ).prefetch_related("crew")
     serializer_class = FlightAdminSerializer
     pagination_class = SmallPagePagination
     filterset_class = FlightFilter
-    permission_classes = (IsAdminOrReadOnly,)
+    permission_classes = (IsAdminUser,)
+    authentication_classes = (JWTAuthentication,)
 
 
 class TicketViewSet(viewsets.ModelViewSet):
     """Manage tickets as admin user"""
     queryset = Ticket.objects.select_related(
-        "flight__route__source",
-        "flight__route__destination",
+        "flight__route__destination__city",
+        "flight__route__source__city",
+        "flight__route__destination__country",
+        "flight__route__source__country",
         "flight__airplane__airplane_type",
-    )
+    ).prefetch_related("flight__crew")
     serializer_class = TicketAdminSerializer
     pagination_class = SmallPagePagination
     filterset_class = TicketFilter
+    permission_classes = (IsAdminUser,)
+    authentication_classes = (JWTAuthentication,)
 
 
 class OrderViewSet(
@@ -139,14 +163,18 @@ class OrderViewSet(
     GenericViewSet,
 ):
     """Get or create order for authenticated user"""
-    queryset = Order.objects.prefetch_related(
-        "tickets__movie_session__movie",
-        "tickets__movie_session__cinema_hall"
+    queryset = Order.objects.select_related(
+        "tickets__flight__route__destination__city",
+        "tickets__flight__route__source__city",
+        "tickets__flight__route__destination__country",
+        "tickets__flight__route__source__country",
+        "tickets__flight__airplane__airplane_type",
     )
     serializer_class = OrderSerializer
     pagination_class = SmallPagePagination
     filterset_class = OrderFilter
     permission_classes = (IsAuthenticated,)
+    authentication_classes = (JWTAuthentication,)
 
     def get_queryset(self):
         return Order.objects.filter(user=self.request.user)
@@ -157,13 +185,18 @@ class OrderViewSet(
 
 class OrderAdminViewSet(viewsets.ModelViewSet,):
     """Manage orders as admin user"""
-    queryset = Order.objects.prefetch_related(
-        "tickets__movie_session__movie",
-        "tickets__movie_session__cinema_hall"
-    )
+    queryset = Order.objects.select_related(
+        "tickets__flight__route__destination__city",
+        "tickets__flight__route__source__city",
+        "tickets__flight__route__destination__country",
+        "tickets__flight__route__source__country",
+        "tickets__flight__airplane__airplane_type",
+    ).prefetch_related("tickets__flight__crew")
     serializer_class = OrderAdminSerializer
     pagination_class = SmallPagePagination
     filterset_class = OrderAdminFilter
+    permission_classes = (IsAdminUser,)
+    authentication_classes = (JWTAuthentication,)
 
     def get_queryset(self):
         return Order.objects.filter(user=self.request.user)
