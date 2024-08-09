@@ -12,7 +12,7 @@ API service for airport management writen on DRF
 
 # Installing using GitHub
 Install PostgresSQL and create database
-> git clone https://github.com/lilarin/airport-api-service.git
+> git clone https://github.com/lilarin/airport-API.git
 > 
 > cd airport_API
 > 
