@@ -120,6 +120,7 @@ class AirplaneSerializer(serializers.ModelSerializer):
     model = serializers.SlugRelatedField(
         read_only=True, slug_field="name", source="airplane_type"
     )
+    available_seats = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = Airplane
@@ -128,8 +129,7 @@ class AirplaneSerializer(serializers.ModelSerializer):
             "name",
             "model",
             "airplane_type",
-            "rows",
-            "seats_in_row"
+            "available_seats"
         )
         extra_kwargs = {
             "airplane_type": {"write_only": True}
@@ -163,6 +163,7 @@ class FlightSerializer(serializers.ModelSerializer):
     route = serializers.PrimaryKeyRelatedField(
         queryset=Route.objects.all()
     )
+    available_seats = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = Flight
@@ -170,6 +171,7 @@ class FlightSerializer(serializers.ModelSerializer):
             "id",
             "route",
             "airplane",
+            "available_seats",
             "departure_time",
             "arrival_time",
         )

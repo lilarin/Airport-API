@@ -1,3 +1,5 @@
+from django.db.models import F, Count, Subquery, OuterRef, ExpressionWrapper, IntegerField
+from django.db.models.functions import Coalesce
 from rest_framework import viewsets, mixins
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import (
@@ -112,6 +114,20 @@ class AirplaneViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAdminUser,)
     authentication_classes = (JWTAuthentication,)
 
+    def get_queryset(self):
+        queryset = self.queryset
+        queryset = (
+            queryset
+            .annotate(
+                available_seats=(
+                        F('rows') * F('seats_in_row')
+                        - Count('flights__tickets')
+                )
+            )
+            .order_by("id")
+        )
+        return queryset
+
 
 class FlightViewSet(
     mixins.ListModelMixin,
@@ -123,6 +139,17 @@ class FlightViewSet(
     serializer_class = FlightSerializer
     pagination_class = SmallPagePagination
     filterset_class = FlightFilter
+
+    def get_queryset(self):
+        queryset = self.queryset
+        queryset = queryset.annotate(
+            available_seats=(
+                    F('airplane__rows')
+                    * F('airplane__seats_in_row')
+                    - Count('tickets')
+            )
+        ).order_by('id')
+        return queryset
 
 
 class FlightAdminViewSet(viewsets.ModelViewSet):
