@@ -66,14 +66,20 @@ class OrderFilter(FilterSet):
         field_name="tickets__flight__route__destination__city__name",
         lookup_expr="icontains"
     )
-    departure_time = filters.DateFilter(
-        field_name="tickets__flight__departure_time", lookup_expr="date"
+    departure_time = filters.DateFromToRangeFilter(
+        field_name="tickets__flight__departure_time"
     )
-    arrival_time = filters.DateFilter(
-        field_name="tickets__flight__arrival_time", lookup_expr="date"
+    arrival_time = filters.DateFromToRangeFilter(
+        field_name="tickets__flight__arrival_time"
     )
     name = filters.CharFilter(
         field_name="tickets__flight__airplane__name", lookup_expr="icontains"
+    )
+
+
+class OrderAdminFilter(OrderFilter):
+    user = filters.NumberFilter(
+        field_name="user_id", lookup_expr="exact"
     )
 
 
