@@ -1,6 +1,9 @@
-from rest_framework import viewsets, mixins, filters
+from rest_framework import viewsets, mixins
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
+from rest_framework.permissions import (
+    IsAuthenticated,
+    AllowAny
+)
 from rest_framework.viewsets import GenericViewSet
 
 from airport.filters import (
