@@ -107,7 +107,7 @@ class RouteSerializer(serializers.ModelSerializer):
         return internal_value
 
 
-class RouteListSerializer(serializers.ModelSerializer):
+class RouteSimplifySerializer(serializers.ModelSerializer):
     source = AirportSerializer(
         many=False, instance="source"
     )
@@ -165,6 +165,25 @@ class CrewSerializer(serializers.ModelSerializer):
             "first_name": {"read_only": True},
             "last_name": {"read_only": True},
         }
+
+
+class FlightSimplifySerializer(serializers.ModelSerializer):
+    departure_time = serializers.DateTimeField(
+        format="%H:%M:%S %d.%m.%Y"
+    )
+    arrival_time = serializers.DateTimeField(
+        format="%H:%M:%S %d.%m.%Y"
+    )
+    route = RouteSimplifySerializer(many=False)
+
+    class Meta:
+        model = Flight
+        fields = (
+            "id",
+            "route",
+            "departure_time",
+            "arrival_time",
+        )
 
 
 class FlightSerializer(serializers.ModelSerializer):
@@ -244,25 +263,6 @@ class FlightSerializer(serializers.ModelSerializer):
         return internal_value
 
 
-class FlightTicketSerializer(serializers.ModelSerializer):
-    departure_time = serializers.DateTimeField(
-        format="%H:%M:%S %d.%m.%Y"
-    )
-    arrival_time = serializers.DateTimeField(
-        format="%H:%M:%S %d.%m.%Y"
-    )
-    route = RouteListSerializer(many=False)
-
-    class Meta:
-        model = Flight
-        fields = (
-            "id",
-            "route",
-            "departure_time",
-            "arrival_time",
-        )
-
-
 class TicketSerializer(serializers.ModelSerializer):
     flight = serializers.PrimaryKeyRelatedField(
         queryset=Flight.objects.all()
@@ -311,17 +311,6 @@ class TicketSerializer(serializers.ModelSerializer):
         return internal_value
 
 
-class OrderFlightSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Flight
-        fields = (
-            "id",
-            "route",
-            "departure_time",
-            "arrival_time",
-        )
-
-
 class TicketOrderSerializer(TicketSerializer):
     class Meta:
         model = Ticket
@@ -358,3 +347,17 @@ class OrderSerializer(serializers.ModelSerializer):
                     order=order, **ticket_data
                 )
             return order
+
+
+class OrderAdminSerializer(OrderSerializer):
+    tickets = TicketOrderSerializer(
+        many=True, read_only=False, allow_empty=False
+    )
+    class Meta:
+        model = Order
+        fields = (
+            "id",
+            "user",
+            "tickets",
+            "created_at"
+        )
