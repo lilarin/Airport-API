@@ -1,0 +1,1701 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-08-08T10:48:38.216Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Atlanta",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-08-08T10:49:14.933Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Tokyo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-08-08T10:49:27.699Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Dubai",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-08-08T10:49:32.752Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "New York",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-08-08T10:49:35.937Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Frankfurt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-08-08T10:49:39.094Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Sydney",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-08-08T10:49:41.590Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Munich",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-08-08T10:49:44.803Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Zurich",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-08-08T10:49:50.096Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Kyiv",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-08-08T10:50:07.671Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "USA",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-08-08T10:50:10.376Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Ukraine",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-08-08T10:50:13.296Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Japan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-08-08T10:50:22.591Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "United Arab Emirates",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-08-08T10:50:26.265Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Germany",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-08-08T10:50:29.309Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Australia",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-08-08T10:50:32.541Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Switzerland",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-08-08T10:50:39.110Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "JapanGermany",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-08-08T10:50:58.871Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "JapanGermany",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-08-08T11:00:47.770Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "2",
+    "object_repr": "user",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-08-08T14:55:02.931Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "6",
+    "object_repr": "admin (2024-08-07 15:19:31.818000+00:00) (flight: Tokyo Haneda Airport (Tokyo - Japan) - John F. Kennedy International Airport (New York - USA) (3100 km) - SkyCruiser 500 (Airbus A321))",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-08-08T15:17:30.745Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "7",
+    "object_repr": "admin (2024-08-07 15:19:31.818000+00:00) (flight: Munich Airport (Munich - Germany) - Hartsfield-Jackson Atlanta International Airport (Atlanta - USA) (1700 km) - CloudWave 800 (COMAC C919))",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-08-08T18:14:34.156Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Airbus A320",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-08-08T18:15:02.707Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "11",
+    "object_repr": "Airbus A321",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-08-08T18:15:44.075Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "4",
+    "object_repr": " (2024-08-07 15:19:27.448000+00:00) (flight: Munich Airport (Munich, Germany) - Hartsfield-Jackson Atlanta International Airport (Atlanta, USA) - CloudWave 800 (COMAC C919))",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add airplane type",
+    "content_type": 6,
+    "codename": "add_airplanetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change airplane type",
+    "content_type": 6,
+    "codename": "change_airplanetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete airplane type",
+    "content_type": 6,
+    "codename": "delete_airplanetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view airplane type",
+    "content_type": 6,
+    "codename": "view_airplanetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add city",
+    "content_type": 7,
+    "codename": "add_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change city",
+    "content_type": 7,
+    "codename": "change_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete city",
+    "content_type": 7,
+    "codename": "delete_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view city",
+    "content_type": 7,
+    "codename": "view_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add country",
+    "content_type": 8,
+    "codename": "add_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change country",
+    "content_type": 8,
+    "codename": "change_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete country",
+    "content_type": 8,
+    "codename": "delete_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view country",
+    "content_type": 8,
+    "codename": "view_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add crew",
+    "content_type": 9,
+    "codename": "add_crew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change crew",
+    "content_type": 9,
+    "codename": "change_crew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete crew",
+    "content_type": 9,
+    "codename": "delete_crew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view crew",
+    "content_type": 9,
+    "codename": "view_crew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add airplane",
+    "content_type": 10,
+    "codename": "add_airplane"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change airplane",
+    "content_type": 10,
+    "codename": "change_airplane"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete airplane",
+    "content_type": 10,
+    "codename": "delete_airplane"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view airplane",
+    "content_type": 10,
+    "codename": "view_airplane"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add airport",
+    "content_type": 11,
+    "codename": "add_airport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change airport",
+    "content_type": 11,
+    "codename": "change_airport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete airport",
+    "content_type": 11,
+    "codename": "delete_airport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view airport",
+    "content_type": 11,
+    "codename": "view_airport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add order",
+    "content_type": 12,
+    "codename": "add_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change order",
+    "content_type": 12,
+    "codename": "change_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete order",
+    "content_type": 12,
+    "codename": "delete_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view order",
+    "content_type": 12,
+    "codename": "view_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add route",
+    "content_type": 13,
+    "codename": "add_route"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change route",
+    "content_type": 13,
+    "codename": "change_route"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete route",
+    "content_type": 13,
+    "codename": "delete_route"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view route",
+    "content_type": 13,
+    "codename": "view_route"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add flight",
+    "content_type": 14,
+    "codename": "add_flight"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change flight",
+    "content_type": 14,
+    "codename": "change_flight"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete flight",
+    "content_type": 14,
+    "codename": "delete_flight"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view flight",
+    "content_type": 14,
+    "codename": "view_flight"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add ticket",
+    "content_type": 15,
+    "codename": "add_ticket"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change ticket",
+    "content_type": 15,
+    "codename": "change_ticket"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete ticket",
+    "content_type": 15,
+    "codename": "delete_ticket"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view ticket",
+    "content_type": 15,
+    "codename": "view_ticket"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 16,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 16,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 16,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 16,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "airport",
+    "model": "airplanetype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "airport",
+    "model": "city"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "airport",
+    "model": "country"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "airport",
+    "model": "crew"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "airport",
+    "model": "airplane"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "airport",
+    "model": "airport"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "airport",
+    "model": "order"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "airport",
+    "model": "route"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "airport",
+    "model": "flight"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "airport",
+    "model": "ticket"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "user",
+    "model": "user"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6ydyr44ln08xjlbtcp0r86kdn0pr10s0",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxT7Yp6TmDtfbu4gBypDipIu5OIqWAdmbe20SCdalp7TSnEcVVKHH5ZRnKi9oh8AntMckytWUeszwSedou7xPS-3a2fwcVet3XwSA5DuyVNtoyORUp7AgCIZoBFbMhFVS0OQIP2TuKxYMtxMFF7cTnC_jhOIM:1sc4WU:wLRAmQihdQd69_5gcUDi7tbjvP5vblQqcQnRh7Vr7no",
+    "expire_date": "2024-08-22T14:53:50.021Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "a9t3o662je58egsg99g15tdqasyxv4l6",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxT7Yp6TmDtfbu4gBypDipIu5OIqWAdmbe20SCdalp7TSnEcVVKHH5ZRnKi9oh8AntMckytWUeszwSedou7xPS-3a2fwcVet3XwSA5DuyVNtoyORUp7AgCIZoBFbMhFVS0OQIP2TuKxYMtxMFF7cTnC_jhOIM:1sc4r0:lEU4i-IO6rc8seRXlIwhp4XpWOrw6W7YWj10-zWxHmM",
+    "expire_date": "2024-08-22T15:15:02.810Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "j0ue0tckxa2q5l2clmh2jejok07mjoiz",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxT7Yp6TmDtfbu4gBypDipIu5OIqWAdmbe20SCdalp7TSnEcVVKHH5ZRnKi9oh8AntMckytWUeszwSedou7xPS-3a2fwcVet3XwSA5DuyVNtoyORUp7AgCIZoBFbMhFVS0OQIP2TuKxYMtxMFF7cTnC_jhOIM:1scOLV:RHSDHSAP9x3AEFck8SDlQzx_zv3I-4eEzOYefAaZuG8",
+    "expire_date": "2024-08-23T12:03:49.386Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jlhd8000ffc4llg0qnejvgrvwrdynyvu",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxT7Yp6TmDtfbu4gBypDipIu5OIqWAdmbe20SCdalp7TSnEcVVKHH5ZRnKi9oh8AntMckytWUeszwSedou7xPS-3a2fwcVet3XwSA5DuyVNtoyORUp7AgCIZoBFbMhFVS0OQIP2TuKxYMtxMFF7cTnC_jhOIM:1sc0gx:BP6Jtekq-LQ4woON2Asuezp_EdgAF7Ji5QCTgWjKI9Q",
+    "expire_date": "2024-08-22T10:48:23.788Z"
+  }
+},
+{
+  "model": "airport.city",
+  "pk": 1,
+  "fields": {
+    "name": "Atlanta"
+  }
+},
+{
+  "model": "airport.city",
+  "pk": 2,
+  "fields": {
+    "name": "Tokyo"
+  }
+},
+{
+  "model": "airport.city",
+  "pk": 3,
+  "fields": {
+    "name": "Dubai"
+  }
+},
+{
+  "model": "airport.city",
+  "pk": 4,
+  "fields": {
+    "name": "New York"
+  }
+},
+{
+  "model": "airport.city",
+  "pk": 5,
+  "fields": {
+    "name": "Frankfurt"
+  }
+},
+{
+  "model": "airport.city",
+  "pk": 6,
+  "fields": {
+    "name": "Sydney"
+  }
+},
+{
+  "model": "airport.city",
+  "pk": 7,
+  "fields": {
+    "name": "Munich"
+  }
+},
+{
+  "model": "airport.city",
+  "pk": 8,
+  "fields": {
+    "name": "Zurich"
+  }
+},
+{
+  "model": "airport.city",
+  "pk": 9,
+  "fields": {
+    "name": "Kyiv"
+  }
+},
+{
+  "model": "airport.country",
+  "pk": 1,
+  "fields": {
+    "name": "USA"
+  }
+},
+{
+  "model": "airport.country",
+  "pk": 2,
+  "fields": {
+    "name": "Ukraine"
+  }
+},
+{
+  "model": "airport.country",
+  "pk": 3,
+  "fields": {
+    "name": "Japan"
+  }
+},
+{
+  "model": "airport.country",
+  "pk": 4,
+  "fields": {
+    "name": "United Arab Emirates"
+  }
+},
+{
+  "model": "airport.country",
+  "pk": 5,
+  "fields": {
+    "name": "Germany"
+  }
+},
+{
+  "model": "airport.country",
+  "pk": 6,
+  "fields": {
+    "name": "Australia"
+  }
+},
+{
+  "model": "airport.country",
+  "pk": 7,
+  "fields": {
+    "name": "Switzerland"
+  }
+},
+{
+  "model": "airport.airport",
+  "pk": 1,
+  "fields": {
+    "name": "Hartsfield-Jackson Atlanta International Airport",
+    "city": 1,
+    "country": 1
+  }
+},
+{
+  "model": "airport.airport",
+  "pk": 2,
+  "fields": {
+    "name": "Tokyo Haneda Airport",
+    "city": 2,
+    "country": 3
+  }
+},
+{
+  "model": "airport.airport",
+  "pk": 3,
+  "fields": {
+    "name": "Dubai International Airport",
+    "city": 3,
+    "country": 4
+  }
+},
+{
+  "model": "airport.airport",
+  "pk": 4,
+  "fields": {
+    "name": "John F. Kennedy International Airport",
+    "city": 4,
+    "country": 1
+  }
+},
+{
+  "model": "airport.airport",
+  "pk": 5,
+  "fields": {
+    "name": "Frankfurt Airport",
+    "city": 5,
+    "country": 5
+  }
+},
+{
+  "model": "airport.airport",
+  "pk": 6,
+  "fields": {
+    "name": "Sydney Kingsford Smith Airport",
+    "city": 6,
+    "country": 6
+  }
+},
+{
+  "model": "airport.airport",
+  "pk": 7,
+  "fields": {
+    "name": "Munich Airport",
+    "city": 7,
+    "country": 5
+  }
+},
+{
+  "model": "airport.airport",
+  "pk": 8,
+  "fields": {
+    "name": "Zurich Airport",
+    "city": 8,
+    "country": 7
+  }
+},
+{
+  "model": "airport.route",
+  "pk": 1,
+  "fields": {
+    "source": 1,
+    "destination": 2,
+    "distance": 2700
+  }
+},
+{
+  "model": "airport.route",
+  "pk": 2,
+  "fields": {
+    "source": 1,
+    "destination": 4,
+    "distance": 600
+  }
+},
+{
+  "model": "airport.route",
+  "pk": 3,
+  "fields": {
+    "source": 7,
+    "destination": 1,
+    "distance": 1700
+  }
+},
+{
+  "model": "airport.route",
+  "pk": 4,
+  "fields": {
+    "source": 8,
+    "destination": 4,
+    "distance": 2150
+  }
+},
+{
+  "model": "airport.route",
+  "pk": 5,
+  "fields": {
+    "source": 3,
+    "destination": 7,
+    "distance": 3140
+  }
+},
+{
+  "model": "airport.route",
+  "pk": 6,
+  "fields": {
+    "source": 5,
+    "destination": 3,
+    "distance": 980
+  }
+},
+{
+  "model": "airport.route",
+  "pk": 7,
+  "fields": {
+    "source": 2,
+    "destination": 4,
+    "distance": 3100
+  }
+},
+{
+  "model": "airport.route",
+  "pk": 8,
+  "fields": {
+    "source": 2,
+    "destination": 7,
+    "distance": 1600
+  }
+},
+{
+  "model": "airport.airplanetype",
+  "pk": 1,
+  "fields": {
+    "name": "Airbus A220"
+  }
+},
+{
+  "model": "airport.airplanetype",
+  "pk": 3,
+  "fields": {
+    "name": "Airbus A321"
+  }
+},
+{
+  "model": "airport.airplanetype",
+  "pk": 4,
+  "fields": {
+    "name": "Airbus A330"
+  }
+},
+{
+  "model": "airport.airplanetype",
+  "pk": 6,
+  "fields": {
+    "name": "Boeing 737"
+  }
+},
+{
+  "model": "airport.airplanetype",
+  "pk": 7,
+  "fields": {
+    "name": "Boeing 757"
+  }
+},
+{
+  "model": "airport.airplanetype",
+  "pk": 8,
+  "fields": {
+    "name": "Boeing 777"
+  }
+},
+{
+  "model": "airport.airplanetype",
+  "pk": 9,
+  "fields": {
+    "name": "COMAC C919"
+  }
+},
+{
+  "model": "airport.airplanetype",
+  "pk": 10,
+  "fields": {
+    "name": "Antonov An-148"
+  }
+},
+{
+  "model": "airport.airplane",
+  "pk": 1,
+  "fields": {
+    "name": "SkyCruiser 500",
+    "airplane_type": 3,
+    "rows": 12,
+    "seats_in_row": 6
+  }
+},
+{
+  "model": "airport.airplane",
+  "pk": 2,
+  "fields": {
+    "name": "Nimbus Jet 700",
+    "airplane_type": 10,
+    "rows": 28,
+    "seats_in_row": 7
+  }
+},
+{
+  "model": "airport.airplane",
+  "pk": 3,
+  "fields": {
+    "name": "Zephyr Air 1000",
+    "airplane_type": 6,
+    "rows": 40,
+    "seats_in_row": 10
+  }
+},
+{
+  "model": "airport.airplane",
+  "pk": 4,
+  "fields": {
+    "name": "CloudWave 800",
+    "airplane_type": 9,
+    "rows": 35,
+    "seats_in_row": 9
+  }
+},
+{
+  "model": "airport.airplane",
+  "pk": 5,
+  "fields": {
+    "name": "AirVoyager 1200",
+    "airplane_type": 7,
+    "rows": 48,
+    "seats_in_row": 12
+  }
+},
+{
+  "model": "airport.airplane",
+  "pk": 6,
+  "fields": {
+    "name": "Nimbus Voyager 1100",
+    "airplane_type": 3,
+    "rows": 8,
+    "seats_in_row": 10
+  }
+},
+{
+  "model": "airport.crew",
+  "pk": 1,
+  "fields": {
+    "first_name": "Emma",
+    "last_name": "Johnson"
+  }
+},
+{
+  "model": "airport.crew",
+  "pk": 2,
+  "fields": {
+    "first_name": "Liam",
+    "last_name": "Brown"
+  }
+},
+{
+  "model": "airport.crew",
+  "pk": 3,
+  "fields": {
+    "first_name": "Olivia",
+    "last_name": "Martinez"
+  }
+},
+{
+  "model": "airport.crew",
+  "pk": 4,
+  "fields": {
+    "first_name": "Logan",
+    "last_name": "Moore"
+  }
+},
+{
+  "model": "airport.crew",
+  "pk": 5,
+  "fields": {
+    "first_name": "Lucas",
+    "last_name": "Anderson"
+  }
+},
+{
+  "model": "airport.crew",
+  "pk": 6,
+  "fields": {
+    "first_name": "Jackson",
+    "last_name": "Robinson"
+  }
+},
+{
+  "model": "airport.crew",
+  "pk": 7,
+  "fields": {
+    "first_name": "Alexander",
+    "last_name": "Hall"
+  }
+},
+{
+  "model": "airport.crew",
+  "pk": 8,
+  "fields": {
+    "first_name": "Charlotte",
+    "last_name": "Young"
+  }
+},
+{
+  "model": "airport.crew",
+  "pk": 9,
+  "fields": {
+    "first_name": "Henry",
+    "last_name": "King"
+  }
+},
+{
+  "model": "airport.crew",
+  "pk": 10,
+  "fields": {
+    "first_name": "Evelyn",
+    "last_name": "Wright"
+  }
+},
+{
+  "model": "airport.crew",
+  "pk": 11,
+  "fields": {
+    "first_name": "Samuel",
+    "last_name": "Scott"
+  }
+},
+{
+  "model": "airport.flight",
+  "pk": 1,
+  "fields": {
+    "route": 3,
+    "airplane": 4,
+    "departure_time": "2024-08-07T14:51:07Z",
+    "arrival_time": "2024-08-08T07:51:12Z",
+    "crew": [
+      4,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "airport.flight",
+  "pk": 2,
+  "fields": {
+    "route": 7,
+    "airplane": 1,
+    "departure_time": "2024-08-14T15:23:00Z",
+    "arrival_time": "2024-08-15T06:00:00Z",
+    "crew": [
+      8,
+      9,
+      11
+    ]
+  }
+},
+{
+  "model": "airport.flight",
+  "pk": 3,
+  "fields": {
+    "route": 5,
+    "airplane": 6,
+    "departure_time": "2024-08-05T03:00:00Z",
+    "arrival_time": "2024-08-05T12:00:00Z",
+    "crew": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "airport.order",
+  "pk": 1,
+  "fields": {
+    "created_at": "2024-08-07T15:19:27.448Z",
+    "user": 2
+  }
+},
+{
+  "model": "airport.order",
+  "pk": 2,
+  "fields": {
+    "created_at": "2024-08-07T15:19:31.818Z",
+    "user": 1
+  }
+},
+{
+  "model": "airport.order",
+  "pk": 3,
+  "fields": {
+    "created_at": "2024-08-07T15:21:30.104Z",
+    "user": 2
+  }
+},
+{
+  "model": "airport.order",
+  "pk": 4,
+  "fields": {
+    "created_at": "2024-08-08T17:32:17.777Z",
+    "user": 1
+  }
+},
+{
+  "model": "airport.ticket",
+  "pk": 1,
+  "fields": {
+    "row": 6,
+    "seat": 2,
+    "flight": 1,
+    "order": 1
+  }
+},
+{
+  "model": "airport.ticket",
+  "pk": 2,
+  "fields": {
+    "row": 4,
+    "seat": 6,
+    "flight": 2,
+    "order": 1
+  }
+},
+{
+  "model": "airport.ticket",
+  "pk": 3,
+  "fields": {
+    "row": 4,
+    "seat": 9,
+    "flight": 2,
+    "order": 3
+  }
+},
+{
+  "model": "airport.ticket",
+  "pk": 5,
+  "fields": {
+    "row": 6,
+    "seat": 2,
+    "flight": 2,
+    "order": 1
+  }
+},
+{
+  "model": "airport.ticket",
+  "pk": 6,
+  "fields": {
+    "row": 2,
+    "seat": 4,
+    "flight": 2,
+    "order": 2
+  }
+},
+{
+  "model": "airport.ticket",
+  "pk": 7,
+  "fields": {
+    "row": 6,
+    "seat": 1,
+    "flight": 1,
+    "order": 2
+  }
+},
+{
+  "model": "airport.ticket",
+  "pk": 8,
+  "fields": {
+    "row": 7,
+    "seat": 4,
+    "flight": 3,
+    "order": 2
+  }
+},
+{
+  "model": "airport.ticket",
+  "pk": 9,
+  "fields": {
+    "row": 1,
+    "seat": 2,
+    "flight": 3,
+    "order": 4
+  }
+},
+{
+  "model": "user.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$XkEbDGfzqfWg5Dk8eGOYxo$8eI8UD330BTmpV2LuhaJezRQ2dGx4gN/LX07ZKJeva4=",
+    "last_login": "2024-08-09T12:03:49.343Z",
+    "is_superuser": true,
+    "first_name": "Admin",
+    "last_name": "User",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-08-08T10:48:12.788Z",
+    "email": "admin@mail.com",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "user.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$WIe2dmfJ9Vdz9IzKwjXAo2$9Z49wLAN8qqXcdoqnuJveQxN/KCjOr8Isf8ElV4xx9c=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Simple",
+    "last_name": "User",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-08T11:00:46.972Z",
+    "email": "user@mail.com",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
