@@ -120,8 +120,8 @@ class AirplaneViewSet(viewsets.ModelViewSet):
             queryset
             .annotate(
                 available_seats=(
-                        F('rows') * F('seats_in_row')
-                        - Count('flights__tickets')
+                        F("rows") * F("seats_in_row")
+                        - Count("flights__tickets")
                 )
             )
             .order_by("id")
@@ -144,11 +144,11 @@ class FlightViewSet(
         queryset = self.queryset
         queryset = queryset.annotate(
             available_seats=(
-                    F('airplane__rows')
-                    * F('airplane__seats_in_row')
-                    - Count('tickets')
+                    F("airplane__rows")
+                    * F("airplane__seats_in_row")
+                    - Count("tickets")
             )
-        ).order_by('id')
+        ).order_by("id")
         return queryset
 
 
