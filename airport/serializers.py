@@ -107,23 +107,6 @@ class RouteSerializer(serializers.ModelSerializer):
         return internal_value
 
 
-class RouteSimplifySerializer(serializers.ModelSerializer):
-    source = AirportSerializer(
-        many=False, instance="source"
-    )
-    destination = AirportSerializer(
-        many=False, instance="destination"
-    )
-
-    class Meta:
-        model = Route
-        fields = (
-            "id",
-            "source",
-            "destination",
-        )
-
-
 class AirplaneTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = AirplaneType
@@ -167,25 +150,6 @@ class CrewSerializer(serializers.ModelSerializer):
         }
 
 
-class FlightSimplifySerializer(serializers.ModelSerializer):
-    departure_time = serializers.DateTimeField(
-        format="%H:%M:%S %d.%m.%Y"
-    )
-    arrival_time = serializers.DateTimeField(
-        format="%H:%M:%S %d.%m.%Y"
-    )
-    route = RouteSimplifySerializer(many=False)
-
-    class Meta:
-        model = Flight
-        fields = (
-            "id",
-            "route",
-            "departure_time",
-            "arrival_time",
-        )
-
-
 class FlightSerializer(serializers.ModelSerializer):
     departure_time = serializers.DateTimeField(
         format="%H:%M:%S %d.%m.%Y"
@@ -193,14 +157,37 @@ class FlightSerializer(serializers.ModelSerializer):
     arrival_time = serializers.DateTimeField(
         format="%H:%M:%S %d.%m.%Y"
     )
-    crew = serializers.PrimaryKeyRelatedField(
-        queryset=Crew.objects.all(), many=True
-    )
     airplane = serializers.PrimaryKeyRelatedField(
         queryset=Airplane.objects.all()
     )
     route = serializers.PrimaryKeyRelatedField(
         queryset=Route.objects.all()
+    )
+
+    class Meta:
+        model = Flight
+        fields = (
+            "id",
+            "route",
+            "airplane",
+            "departure_time",
+            "arrival_time",
+        )
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation["airplane"] = AirplaneSerializer(
+            instance.airplane
+        ).data
+        representation["route"] = RouteSerializer(
+            instance.route
+        ).data
+        return representation
+
+
+class FlightAdminSerializer(FlightSerializer):
+    crew = serializers.PrimaryKeyRelatedField(
+        queryset=Crew.objects.all(), many=True
     )
 
     class Meta:
@@ -216,12 +203,6 @@ class FlightSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
-        representation["airplane"] = AirplaneSerializer(
-            instance.airplane
-        ).data
-        representation["route"] = RouteSerializer(
-            instance.route
-        ).data
         representation["crew"] = CrewSerializer(
             instance.crew.all(), many=True
         ).data
@@ -311,7 +292,7 @@ class TicketSerializer(serializers.ModelSerializer):
         return internal_value
 
 
-class TicketOrderSerializer(TicketSerializer):
+class TicketAdminSerializer(TicketSerializer):
     class Meta:
         model = Ticket
         fields = (
@@ -321,9 +302,16 @@ class TicketOrderSerializer(TicketSerializer):
             "flight",
         )
 
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation["flight"] = FlightAdminSerializer(
+            instance.flight
+        ).data
+        return representation
+
 
 class OrderSerializer(serializers.ModelSerializer):
-    tickets = TicketOrderSerializer(
+    tickets = TicketSerializer(
         many=True, read_only=False, allow_empty=False
     )
     created_at = serializers.DateTimeField(
@@ -350,9 +338,10 @@ class OrderSerializer(serializers.ModelSerializer):
 
 
 class OrderAdminSerializer(OrderSerializer):
-    tickets = TicketOrderSerializer(
+    tickets = TicketAdminSerializer(
         many=True, read_only=False, allow_empty=False
     )
+
     class Meta:
         model = Order
         fields = (

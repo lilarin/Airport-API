@@ -10,7 +10,7 @@ from airport.views import (
     AirplaneTypeViewSet,
     FlightViewSet,
     TicketViewSet,
-    OrderViewSet, OrderAdminViewSet
+    OrderViewSet, OrderAdminViewSet, FlightAdminViewSet
 )
 
 router = routers.DefaultRouter()
@@ -21,6 +21,7 @@ router.register("routes", RouteViewSet)
 router.register("airplane_types", AirplaneTypeViewSet)
 router.register("airplanes", AirplaneViewSet)
 router.register("flights", FlightViewSet)
+router.register("flights-admin", FlightAdminViewSet, basename="flights-admin")
 router.register("tickets", TicketViewSet)
 router.register("orders", OrderViewSet)
 router.register("orders-admin", OrderAdminViewSet, basename="orders-admin")

@@ -1,6 +1,6 @@
 from rest_framework import viewsets, mixins, filters
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from rest_framework.permissions import IsAuthenticated, IsAdminUser, AllowAny
 from rest_framework.viewsets import GenericViewSet
 
 from airport.filters import (
@@ -31,8 +31,10 @@ from airport.serializers import (
     CountrySerializer,
     AirplaneTypeSerializer,
     AirportSerializer,
-    TicketSerializer,
-    OrderSerializer, OrderAdminSerializer
+    OrderSerializer,
+    OrderAdminSerializer,
+    FlightAdminSerializer,
+    TicketAdminSerializer
 )
 
 
@@ -94,10 +96,23 @@ class AirplaneViewSet(viewsets.ModelViewSet):
     filterset_class = NameFilter
 
 
-class FlightViewSet(viewsets.ModelViewSet):
-    """View flights for everyone or manage as admin user"""
+class FlightViewSet(
+    mixins.ListModelMixin,
+    mixins.RetrieveModelMixin,
+    GenericViewSet,
+):
+    """View flights for everyone"""
     queryset = Flight.objects.select_related().prefetch_related("crew")
     serializer_class = FlightSerializer
+    pagination_class = SmallPagePagination
+    filterset_class = FlightFilter
+    permission_classes = (AllowAny,)
+
+
+class FlightAdminViewSet(viewsets.ModelViewSet):
+    """Manage flights as admin user"""
+    queryset = Flight.objects.select_related().prefetch_related("crew")
+    serializer_class = FlightAdminSerializer
     pagination_class = SmallPagePagination
     filterset_class = FlightFilter
     permission_classes = (IsAdminOrReadOnly,)
@@ -110,7 +125,7 @@ class TicketViewSet(viewsets.ModelViewSet):
         "flight__route__destination",
         "flight__airplane__airplane_type",
     )
-    serializer_class = TicketSerializer
+    serializer_class = TicketAdminSerializer
     pagination_class = SmallPagePagination
     filterset_class = TicketFilter
 
