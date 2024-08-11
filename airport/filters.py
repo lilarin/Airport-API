@@ -73,7 +73,8 @@ class OrderFilter(FilterSet):
         field_name="tickets__flight__arrival_time"
     )
     name = filters.CharFilter(
-        field_name="tickets__flight__airplane__name", lookup_expr="icontains"
+        field_name="tickets__flight__airplane__name",
+        lookup_expr="icontains"
     )
 
 
