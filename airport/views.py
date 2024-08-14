@@ -1,10 +1,9 @@
-from django.db.models import F, Count, Subquery, OuterRef, ExpressionWrapper, IntegerField
-from django.db.models.functions import Coalesce
+from django.db.models import F, Count
 from rest_framework import viewsets, mixins
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import (
-    IsAuthenticated,
-    IsAdminUser
+    IsAdminUser,
+    AllowAny
 )
 from rest_framework.viewsets import GenericViewSet
 from rest_framework_simplejwt.authentication import (
@@ -139,6 +138,7 @@ class FlightViewSet(
     serializer_class = FlightSerializer
     pagination_class = SmallPagePagination
     filterset_class = FlightFilter
+    permission_classes = (AllowAny,)
 
     def get_queryset(self):
         queryset = self.queryset
@@ -200,7 +200,6 @@ class OrderViewSet(
     serializer_class = OrderSerializer
     pagination_class = SmallPagePagination
     filterset_class = OrderFilter
-    permission_classes = (IsAuthenticated,)
     authentication_classes = (JWTAuthentication,)
 
     def get_queryset(self):
